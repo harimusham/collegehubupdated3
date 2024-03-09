@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ds-Students</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #department
+        {
+            font-weight:bold;
+            text-transformation:capitalize;
+        }
+        #card:hover
+        {
+            padding:20px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="dss">
+        <div class="dssmain" style="display: flex; flex-wrap: wrap;overflow:hidden;">
+            {% for dsres in dsresultss %}
+            <div  id="card" class="card" style="width:25%; margin: 40px;">
+                <img class="card-img-top" src="data:image/png;base64,{{ dsres['SIMAGE'] }}" alt="Card image cap" height="300px">
+                <div class="card-body" id="card-bodys">
+                    <h5 class="card-title">Roll No:<h3 style="border:2px solid black;text-align: center;">{{ dsres['SID'] }}</h3></h5>
+                    <h5 class="card-title">Student Name:<h3 style="text-align: center;text-decoration:underline;font-weight:bold;"> {{ dsres['SFULLNAME']}}</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" id="department">FATHERNAME:{{dsres['SFATHERNAME']}}</li>
+                        <li class="list-group-item" id="department">MOBILENUMBER:{{dsres['S-MOBNUMBER']}}</li>
+                        <li class="list-group-item" id="department">DATEOFBIRTH:{{dsres['SFATHERNAME']}}</li>
+                        <li class="list-group-item" id="department">GENDER:{{dsres['SGENDER']}}</li>
+                        <li class="list-group-item" id="department">EMAIL:{{dsres['SEMAIL']}}</li>
+                        <li class="list-group-item" id="department">COURSE:{{dsres['SCOURSE']}}</li>
+                        <li class="list-group-item" id="department">SSC-MARKS:{{dsres['SSSC']}}</li>
+                        <li class="list-group-item" id="department">INTER-MARKS{{dsres['SINTER']}}</li>
+                        <li class="list-group-item" id="department">CGPA<h3 style="border:2px solid black;width:60px;position:relative;left:40%;border-radius:10px;padding:3px;">{{dsres['SGPA']}}</h3></li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

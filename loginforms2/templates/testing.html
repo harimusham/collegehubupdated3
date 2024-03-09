@@ -1,0 +1,179 @@
+
+    {% if is_getcivil1emailscat %}
+    <div>
+        {% if top3civil1eresults %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black;text-align:center;">Name</th>
+                    <th style="border: 1px solid black;">Mobile Number</th>
+                    <th style="border: 1px solid black;text-align:center;">Department</th>
+                    <th style="border: 1px solid black;text-align:center;">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in top3civil1eresults %}
+                <tr>
+                    <td style="border: 1px solid black;">{{ result[0] }}</td>
+                    <td style="border: 1px solid black;">{{ result[1] }}</td>
+                    <td style="border: 1px solid black;">{{ result[2] }}</td>
+                    <td style="border: 1px solid black;"><a href="mailto:{{ result[3] }}">ContactMe</a></td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+            <a href="mailto:{% for result in  top3civil1eresults %}{{ result[3] }}{% if not loop.last %},{% endif %}{% endfor %}">Send Email</a>
+        </div>
+        {% endif %}
+
+        {% if bottom10civil1eresults %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black;text-align:center;">Name</th>
+                    <th style="border: 1px solid black;">Mobile Number</th>
+                    <th style="border: 1px solid black;text-align:center;">Department</th>
+                    <th style="border: 1px solid black;text-align:center;">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in bottom10civileresults %}
+                <tr>
+                    <td style="border: 1px solid black;">{{ result[0] }}</td>
+                    <td style="border: 1px solid black;">{{ result[1] }}</td>
+                    <td style="border: 1px solid black;">{{ result[2] }}</td>
+                    <td style="border: 1px solid black;"><a href="mailto:{{ result[3] }}">ContactMe</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+            <a href="mailto:{% for result in bottom10civil1eresults %}{{ result[3] }}{% if not loop.last %},{% endif %}{% endfor %}">Send Email</a>
+        </div>
+        {% endif %}
+
+        {% if top10civil1eresults %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black;text-align:center;">Name</th>
+                    <th style="border: 1px solid black;">Mobile Number</th>
+                    <th style="border: 1px solid black;text-align:center;">Department</th>
+                    <th style="border: 1px solid black;text-align:center;">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in top10civileresults %}
+                <tr>
+                    <td style="border: 1px solid black;">{{ result[0] }}</td>
+                    <td style="border: 1px solid black;">{{ result[1] }}</td>
+                    <td style="border: 1px solid black;">{{ result[2] }}</td>
+                    <td style="border: 1px solid black;"><a href="mailto:{{ result[3] }}">ContactMe</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+            <a href="mailto:{% for result in top10civil1eresults %}{{ result[3] }}{% if not loop.last %},{% endif %}{% endfor %}">Send Email</a>
+        </div>
+        {% endif %}
+
+        
+        {% if civil1secaeresults %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black;text-align:center;">Name</th>
+                    <th style="border: 1px solid black;">Mobile Number</th>
+                    <th style="border: 1px solid black;">Department</th>
+                    <th style="border: 1px solid black;text-align:center;">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in civil1secaeresults %}
+                <tr>
+                    <td style="border: 1px solid black;">{{ result[0] }}</td>
+                    <td style="border: 1px solid black;">{{ result[1] }}</td>
+                    <td style="border: 1px solid black;">{{ result[2] }}</td>
+                    <td style="border: 1px solid black;"><a href="mailto:{{ result[3] }}">ContactMe</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+           
+            <a href="mailto:{% for result in civil1secaeresults %}{{ result[3] }}{% if not loop.last %},{% endif %}{% endfor %}">Send Email</a>
+
+        </div>
+        {% endif %}
+
+        {% if civil1secberesults %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black;text-align:center;">Name</th>
+                    <th style="border: 1px solid black;">Mobile Number</th>
+                    <th style="border: 1px solid black;text-align:center;">Department</th>
+                    <th style="border: 1px solid black;text-align:center;">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in civil1secberesults %}
+                <tr>
+                    <td style="border: 1px solid black;">{{ result[0] }}</td>
+                    <td style="border: 1px solid black;">{{ result[1] }}</td>
+                    <td style="border: 1px solid black;">{{ result[2] }}</td>
+                    <td style="border: 1px solid black;"><a href="mailto:{{ result[3] }}">ContactMe</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+           
+            <a href="mailto:{% for result in civil1secberesults %}{{ result[3] }}{% if not loop.last %},{% endif %}{% endfor %}">Send Email</a>
+
+        </div>
+        {% endif %}
+
+        
+        {% if totalcivil1eresults %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid black;text-align:center;">Name</th>
+                    <th style="border: 1px solid black;">Mobile Number</th>
+                    <th style="border: 1px solid black;text-align:center;">Department</th>
+                    <th style="border: 1px solid black;text-align:center;">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in totalcivil1eresults %}
+                <tr>
+                    <td style="border: 1px solid black;">{{ result[0] }}</td>
+                    <td style="border: 1px solid black;">{{ result[1] }}</td>
+                    <td style="border: 1px solid black;">{{ result[2] }}</td>
+                    <td style="border: 1px solid black;"><a href="mailto:{{ result[3] }}">ContactMe</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+           
+            <a href="mailto:{% for result in totalcivil1eresults %}{{ result[3] }}{% if not loop.last %},{% endif %}{% endfor %}">Send Email</a>
+
+        </div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+
+
+
+
+
+
+
+

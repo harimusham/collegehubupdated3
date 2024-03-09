@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            table{
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+              
+              td, th {
+                border: 5px solid #dddddd;
+                text-align: left;
+                padding:8px;
+              }
+              
+              tr:nth-child(even) {
+                background-color: #dddddd;
+              }
+        *
+        {
+            border-radius:10px;
+            font-weight:bold;
+        }
+        </style>
+        
+    </head>
+    <body>
+        <h1>THE students marks of lab external and mid marks </h1>
+        <br>
+        <br>
+        <br>
+    <table>
+        <tr>
+            <th>student Id</th>
+            <th>semister</th>
+            <th>ML</th>
+            <th>CD</th>
+            <th>SE</th>
+        </tr>
+        <tr>
+          
+            <td> {% for result in results %}
+                {{ result[0] }}
+                {% endfor %}
+            </td>
+            <td> {% for result in results %}
+                {{ result[1] }}
+                {% endfor %}
+            </td>
+            <td> {% for result in results %}
+                {{ result[2] }}
+                {% endfor %}
+            </td>
+            <td> {% for result in results %}
+                {{ result[3] }}
+                {% endfor %}
+            </td>
+            <td> {% for result in results %}
+                {{ result[4] }}
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+
+</html>

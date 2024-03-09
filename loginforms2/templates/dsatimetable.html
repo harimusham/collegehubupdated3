@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        <style>
+            .logout
+            {
+             position: absolute;
+             right:5px;
+             top:139px;
+             color:black;
+             font-weight: bold;
+             border:2px solid black;
+             padding:3px;
+             font-size: 20px;
+             border-radius:10px;
+            }
+            .logout:hover
+            {
+             background-color:black;
+             color:white;
+             font-weight: bold;
+            }
+            #suc
+            {
+                height:50px;
+                font-weight:bold;
+                color:black;
+                font-size:30px;
+                text-align:center;
+                
+    
+            }
+            a
+            {
+                color:white;
+                text-decoration:none;
+            }
+            .marq { 
+                padding-top: 10px; 
+                padding-bottom: 10px; 
+                border:2px solid black;
+                border-radius:10px;
+            } 
+      
+            .exams,.scholarships
+            {
+                font-weight: bold;
+                color:black;
+                font-size:30px;
+                text-decoration:underline;
+                color:black;
+            }
+            marquee
+            {
+                color:red;
+                font-weight:bold;
+            }
+        </style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="static/sreyasheader.jpg"  width="100%" height="130px" class="sticky">
+    </div>
+    <div class="main"> 
+        <marquee class="marq" bgcolor="white"
+                 direction="left" loop="">
+                <div class="data"> <span class="exams">**Exams**:</span>MID EXAMS FOR IV YEARS SHOULD BE STARTS FROM <span class="dates"> 11/04/2003 </span> KINDLY PAY YOUR COLLEGE FEES AND BUS FEES WITHOUT ANY DELAYS...
+                <span class="scholarships">**ScholarShips**::</span>Every Student Must and Should Take Biometric from near by Mee Seva Center And last date to  Submitt the data to college is <span class="dates">30/1/2024</span></div>
+        </marquee> 
+      </div>
+    <a class="logout" href="{{ url_for('logout')}}">Logout</a>  
+
+<br>
+
+    <img class="tt" src="static/timetable.jpg" alt="noimage" width="100%" height="800px";>
+</body>
+</html>

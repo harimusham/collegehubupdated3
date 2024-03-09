@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Submission To Hod</title>
+    <style>
+        .logout
+        {
+         position: absolute;
+         right:5px;
+         top:139px;
+         color:black;
+         font-weight: bold;
+         border:2px solid black;
+         padding:5px;
+         font-size: 20px;
+         border-radius:10px;
+        }
+        .logout:hover
+        {
+         background-color:black;
+         color:white;
+         font-weight: bold;
+        }
+
+    </style>
+   
+</head>
+<body>
+    <h1>Hod-Complaint Submission Form</h1>
+    <a class="logout" href="{{ url_for('logout')}}">logout</a> 
+    <form id="hodcomplaint" action="/hodcom" method="post"  enctype="multipart/form-data">
+        <label for="title">ID:</label><br>
+        <input type="Number" id="title" name="hodid" required><br>
+        <label for="cname">Name:</label><br>
+        <input type="text" id="cname" name="hodname" required><br>
+        <label for="cdepartment">Department</label><br>
+        <select id="cdepartment" name="hoddepartment" required>
+            <option value="">Select Department</option>
+            <option value="ComputerScience">ComputerScience</option>
+            <option value="DataScience">DataScience</option>
+            <option value="ECE">Ece</option>
+            <option value="AI-ML">Ai-Ml</option>
+            <option value="MECHANICAL">Mechanical</option>
+            <option value="CIVIL">Civil</option>
+        </select>
+        <br>
+        <label for="csection">Section</label>
+        <br>
+        <select id="csection" name="hodsection" required>
+            <option value="">Select Section</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+           
+        </select>
+        <br>
+
+
+        <label for="category">Category:</label><br>
+        <select id="category" name="hodcategory" required>
+            <option value="">Select Category</option>
+            <option value="academic">Academic</option>
+            <option value="infrastructure">Infrastructure</option>
+            <option value="administrative">Administrative</option>
+        </select><br>
+        
+      
+
+        <label for="priority">Priority:</label><br>
+        <select id="priority" name="hodpriority" required>
+            <option value="">Select Priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br>
+
+      
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="hoddescription" rows="6" required></textarea><br>
+        <br>
+        <label for="hodimage">Hod-Proof-Image</label>
+        <input type="file" id="hodimage" name="hodimage" accept="image/x-png,image/gif,image/jpeg,image/jpg,image/png">
+        <br>
+        <button type="submit">Submit Complaint</button>
+    </form>
+</body>
+</html>

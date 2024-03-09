@@ -1,0 +1,257 @@
+img.sticky
+            {
+               position: sticky;
+               top: 0;
+               width:100%;
+            }
+           img
+           {
+               border:2px solid black;
+               border-radius:10px;
+               margin-bottom:10px;
+           }
+           .abc
+           {
+               margin-top:50px;
+               width:30%;
+               display:inline-block;
+               box-sizing:border-box;
+               position:relative;
+               max-height:620px;
+               left:0px;
+               border:4px solid black;
+               
+               color:white;
+               bottom:40px;
+               box-shadow: 5px 10px 8px 10px #888888;
+   
+           }
+           .custom-flex {
+               display: flex;
+               gap: 10rem;
+           }
+           td
+           {
+             
+               font-weight:bold;
+           }
+           td
+           {
+               color:brown;
+           }
+         
+           span
+           {
+               color:blue;
+               text-decoration:uppercase;
+               text-decoration: underline;
+               font-style:italic;
+           }
+           .vl
+           {
+               border:3px solid black;
+               height:2000px;
+           }
+           .dss
+           {
+                display:flex;
+           }
+           .dss
+           {
+                position:relative;
+                border:2px solid black;
+           }
+           .isalldepartments
+           {
+            border:2px solid black;
+            width:1050px;
+            height:500px;
+            display:flex;
+            gap:50px;
+            flex-wrap: wrap;
+            margin-top:10px;
+            flex-direction: center;
+            padding: 15px 20px;
+           }
+           .edeprt
+           {
+            width:300px;
+            height:200px;
+            border:1px solid black;
+            text-align:center;
+            border-radius:20px;
+          
+           }
+           .edeprtl
+           {
+            width:300px;
+            height:200px;
+            border:1px solid black;
+            text-align:center;
+            border-radius:20px;
+            
+           }
+           #dname
+           {
+            text-decoration:none;
+            font-weight:bold;
+            text-transform:uppercase;
+            position:relative;
+            top:60px;
+            color:black;
+           }
+           #hds
+           {
+            position:relative;
+            bottom:100px;
+            width:500px;
+           }
+           .dssmain
+           {
+            position:relative;
+            left:150px;
+           
+           }
+           .forstudents
+           {
+            border:2px solid black;
+            padding:150px;
+            width:150px;
+            border-radius:50px;
+           }
+           .forfacultys
+           {
+            border:2px solid black;
+            padding:150px;
+            width:150px;
+            border-radius:50px;
+
+           }
+           .stun
+           {
+            text-decoration:none;
+            font-weight:bold;
+            color:black;
+            font-size:50px;
+            position:relative;
+            right:90px;
+           }
+           .facn
+           {
+            text-decoration:none;
+            font-weight:bold;
+            color:black;
+            font-size:50px;
+            position:relative;
+            right:90px;
+            border-radius:50px;
+
+           }
+           #notf
+           {
+            position:relative;
+            left:50px;
+            display:flex;
+            gap:150px;
+           }
+           .navbar {
+            overflow: hidden;
+            background-color: #333;
+          }
+          .isalldepartmentsp
+          {
+           border:2px solid black;
+           width:1050px;
+           height:550px;
+           display:flex;
+           gap:90px;
+           flex-wrap: wrap;
+           margin-top:10px;
+           flex-direction: center;
+           padding: 15px 20px;
+        
+          }
+          .edeprtp
+          {
+           width:300px;
+           height:200px;
+           border:1px solid black;
+           text-align:center;
+           border-radius:20px;
+           position:relative;
+           left:100px;
+         
+          }
+          .edeprtlp
+          {
+           width:300px;
+           height:200px;
+           border:1px solid black;
+           text-align:center;
+           border-radius:20px;
+           position:relative;
+           left:100px;
+           
+          }
+          .getemails
+          {
+            border:2px solid black;
+            padding:20px;
+            text-align:center;
+          }
+          .dss
+           {
+                display:flex;
+           }
+           .dss
+           {
+                border:2px solid black;
+                position:relative;
+                left:100px;
+           }
+           .isalldepartments
+           {
+            border:2px solid black;
+            width:1050px;
+            height:500px;
+            display:flex;
+            gap:50px;
+            flex-wrap: wrap;
+            margin-top:10px;
+            flex-direction: center;
+            padding: 15px 20px;
+           }
+
+           .plstudentss
+           {
+            border:2px solid black;
+            position:relative;
+            left:200px;
+
+           }
+           #orgChartContainer
+           {
+            border:2px solid black;
+            width:900px;
+            height:500px;
+            padding:35px;
+            position:relative;
+            left:20px;
+            border-radius:20px;
+            box-shadow: 5px 10px;
+            outline-offset: 2px 2px;
+            
+           }
+           .custom-node .org-chart-line {
+            height: 200px; /* Adjust the height of the connecting line */
+            }
+
+            .PComplaints
+            {
+                 border:2px solid black;
+                 padding-left:80px;
+                 gap:50px;
+                 padding-top:30px;
+               
+            }
+            

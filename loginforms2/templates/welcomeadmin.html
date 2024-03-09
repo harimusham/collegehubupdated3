@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>admin Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .logout
+        {
+         position: absolute;
+         right:5px;
+         top:135px;
+         color:black;
+         font-weight: bold;
+         border:2px solid black;
+         padding:3px;
+         font-size: 20px;
+         border-radius:10px;
+        }
+        .logout:hover
+        {
+         background-color:black;
+         color:white;
+         font-weight: bold;
+        }
+        .abcd
+        {
+            font-weight: bold;
+            max-width:50%;
+            position: relative;
+            left:30px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <img src="static/sreyasheader.jpg"  width="100%" height="110px">
+    </div>
+    <br>
+    <div class="logouts">
+        <h5>Welcome Admin </h5>
+        <a class="logout" href="{{ url_for('logout')}}">Logout</a>  
+    </div>
+    <br>
+    <hr>
+    <div class="abcd">
+    <div>
+        <a  href="{{ url_for('insert_data')}}" class="list-group-item list-group-item-action border border-5 rounded bg-danger p-2 text-dark bg-opacity-75">Add Faculty</a>
+        <a href="{{ url_for('insertsData')}}" class="list-group-item list-group-item-action border border-5 rounded bg-danger p-2 text-dark bg-opacity-75">Add Students </a> 
+        <a href="{{ url_for('insertpdata')}}" class="list-group-item list-group-item-action border border-5 rounded bg-danger p-2 text-dark bg-opacity-75">Add Parents </a> 
+    </div>  
+    <div>
+       
+    </div>
+</div>
+</body>
+</html>

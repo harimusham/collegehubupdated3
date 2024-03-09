@@ -1,0 +1,975 @@
+<html>
+    <head>
+        <title>Faculty Interface</title>
+        <style>
+            img
+            {
+                border:2px solid black;
+                border-radius:10px;
+                margin-bottom:10px;
+            }
+            .fabc
+            {
+                display:inline-block;
+                height:630px;
+                border:5px solid black;
+                position:absolute;
+                left:10px;
+                width:25%;
+                font-weight:bold;
+                padding:5px;
+                box-shadow: 5px 10px 8px 10px #888888;
+                
+            
+               
+               
+            }
+            .table
+            {
+                position: relative;
+                bottom:170px;
+            }
+            
+            .faddmarkss
+            {
+                border:5px solid black;
+                padding:10px;
+                border-radius:20px;
+                width: 550px;
+                position: relative;
+                left:200px;
+                box-shadow: 10px 10px 10px grey;
+            }
+            .addnotes
+            {
+                border:2px solid black;
+        
+                height:400px;
+                border-radius:20px;
+                padding:15px;
+                position: relative;
+                left:200px;
+                font-weight:bold;
+                box-shadow: 20px 20px 10px grey;
+            }
+            .addjobs
+            {
+              border:2px solid black;
+              position:relative;
+              left:200px;
+              height:550px;
+              padding:10px;
+              width:500px;
+              border-radius:15px;
+              font-weight:bold;
+              box-shadow: 10px 10px 10px grey;
+            }
+            .custom-flex {
+                display: flex;
+                justify-content: center;
+                gap: 5rem;
+                flex-direction:row;
+            }
+            .gfprofile
+            {
+                position:relative;
+                left:200px;
+            }
+            span
+            {
+                font-style:italic;
+                text-decoration:underline;
+                text-decoration: uppercase;
+                color:blue;
+                
+
+            }
+            .vl
+            {
+                border:2px solid black;
+                height:9000px;
+                position: relative;
+                left:150px;
+            }
+            .marks
+            {
+                width:50%;
+                padding:5px;
+                position: relative;
+                left:100px;
+            }
+            #fp:hover
+            {
+                text-decoration:underline;
+            }
+            .logout
+            {
+             position: absolute;
+             right:5px;
+             top:139px;
+             color:black;
+             font-weight: bold;
+             border:2px solid black;
+             padding:5px;
+             font-size: 20px;
+             border-radius:10px;
+            }
+            .logout:hover
+            {
+             background-color:black;
+             color:white;
+             font-weight: bold;
+            }
+            input
+            {
+                border-radius:10px;
+                padding:5px;
+                border:5px solid gray;
+                font-weight:bold;
+                color:black;
+                text-transform: capitalize;
+
+            }
+            label
+            {
+                
+                text-decoration:underline;
+                font-weight:bold;
+            }
+            .getprofile
+            {
+                border:5px solid black;
+                width:900px;
+                position:relative;
+                left:50px;
+                border-radius:10px;
+                box-shadow: 10px 10px 10px grey;
+                font-weight:bold;
+    
+            }
+            .example_f {
+                border-radius: 4px;
+                background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+                border: none;
+                color: #FFFFFF;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 22px;
+                padding: 20px;
+                width: 200px;
+                transition: all 0.4s;
+                cursor: pointer;
+                margin: 5px;
+              }
+              .example_f span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.4s;
+              }
+              .example_f span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+              }
+              .example_f:hover span {
+                padding-right: 25px;
+              }
+              .example_f:hover span:after {
+                opacity: 1;
+                right: 0;
+              }
+              #pp:hover
+              {
+                  background-color:lightblue;
+                  text-decoration:underline;
+                  color:brown;
+                  font-size:23px;
+              } 
+              #nsubmit
+              {
+                width:150px;
+              }
+              #nsubmit:hover
+              {
+                background-color:black;
+                color:white;
+                padding:10px;
+                width:160px;
+              }
+
+              .image
+              {
+                  position:relative;
+                  left:590px;
+              }  
+
+            
+              .tablee {
+                width: 100%;
+                border-collapse: collapse;
+            }     
+                
+            .tablee th, .tablee td {
+                border: 1px solid #dddddd;
+                padding: 8px;
+                text-align: left;
+            }  
+                
+            .tablee th {
+                background-color: #f2f2f2;
+            }
+                
+            .tablee tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+              
+                .tablee tr:hover {
+                    background-color: #f1f1f1;
+            
+                }
+            .PComplaints
+            {
+          
+                position: relative;
+                display:flex;
+                left:210px;
+                width:1400px;
+                height:2300px;
+                border:2px solid black;
+            }
+            #department
+            {
+                font-weight:bold;
+                text-transform: uppercase;
+            }
+            #Description
+            {
+                font-weight:bold;
+                text-transform:uppercase;
+                color:red;
+                text-decoration:underline;
+            }
+            .pcc
+            {
+                display:flex;
+            }
+           
+         
+            </style>
+             
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+        <body>
+           
+            <div>
+                <img src="static/sreyasheader.jpg" width="100%" height="130px">
+            </div>
+            <div class="logouts">
+                <h5>WELCOME..................<span>{{fname}}</span> </h5>
+                <a class="logout" href="{{ url_for('logout')}}">Logout</a>  
+            </div>
+
+            <hr>
+            <div class="custom-flex">
+                <div class="list-group mb-4 fabc">
+                    <div class="button_cont">
+                        <a  id="pp" href="{{ url_for('getprofile',fname=fname, name=name, facid=facid) }}" target="_blank" class="list-group-item list-group-item-action border border-5 rounded  p-2 text-dark bg-opacity-75 example_f"><img width="39" height="39" src="https://img.icons8.com/ios/50/user-menu-male.png" alt="user-menu-male"/>Profile</a>
+                    </div>  
+                    <div class="button_cont">
+                        <a  id="pp" href="{{ url_for('faddmarks',fname=fname, name=name, facid=facid) }}" class="list-group-item list-group-item-action border border-5 rounded  p-2 text-dark bg-opacity-75  example_f"><img width="39" height="39" src="https://img.icons8.com/ios/50/report-card.png" alt="report-card"/>Add Marks </a>
+                    </div>
+                    <div>
+                        <a  id="pp" href="{{ url_for('add_notes',fname=fname, name=name, facid=facid) }}" class="list-group-item list-group-item-action border border-5 rounded  p-2 text-dark bg-opacity-75  example_f"><img width="39" height="39" src="https://img.icons8.com/ios-filled/50/task.png" alt="task"/>Add Notes</a>
+                    </div>
+                    <div>
+                    <a  id="pp" href="{{ url_for('add_attendance') }}" class="list-group-item list-group-item-action border border-5 rounded  p-2 text-dark bg-opacity-75 example_f"><img width="39" height="39" src="https://img.icons8.com/dotty/80/attendance-mark.png" alt="attendance-mark"/> Attendance</a>
+                    </div>
+                    <div>
+                    <a   id="pp" href="https://jntuhresults.vercel.app/" class="list-group-item list-group-item-action border border-5 rounded  p-2 text-dark bg-opacity-75 example_f" target="_blank"> <img class="car" width="39" height="39" src="https://img.icons8.com/dotty/80/personal-growth.png" alt="personal-growth"/>Academic Results</a>
+                    </div>
+                    <div>
+                    <a   id="pp" href="{{ url_for('stuprofac') }}" action="{{ url_for('stuprofac') }}" class="list-group-item list-group-item-action border border-5 rounded  p-2 text-dark bg-opacity-75 example_f">
+                        <img  class="car" width="39" height="39" src="https://img.icons8.com/dotty/80/personal-growth.png" alt="personal-growth"/>
+                        SEARCH STUDENT
+                    </a>
+                    <div>
+                        <a   id="pp"  href="{{ url_for('getpcomplaints',fname=fname,name=name,facid=facid)}}" class="list-group-item list-group-item-action border border-5 rounded  p-2 text-dark bg-opacity-75 example_f" > <img class="car" width="39" height="39" src="https://img.icons8.com/dotty/80/personal-growth.png" alt="personal-growth"/>SEE COMPLAINTS</a>
+                    </div>
+                   
+                    
+                    </div>
+                </div>
+
+                <div class="vl"></div>
+                
+                <div class="gfprofile">
+                {% if  is_profile %}
+                    <div class="getprofile">
+                        <table class="table" style="font-weight:bold;" >
+                            <div class="image">
+                                <img src="data:image/jpeg;base64,{{fimgres}}" alt="Gallery Image" height="250px" width="300px">
+                                
+                            </div>
+                            <tr>
+                                <th style="text-decoration:underline;color:#4ca2cb;font-size:30px;font-weight: bold;">PERSONAL DETAILS:: </th>
+                                <td style="color:black"></td>
+                                <td style="color:black"></td>
+    
+                            </tr>
+                            
+                            
+                            <tr>
+                                <th>Faculty Id</th>
+                                <td>::</td>
+                                <td>{{profileresults[0][0]}}</td>
+                            </tr>
+                        
+                           
+                            <tr>
+                                <th>User Name</th>
+                                <td>::</td>
+                                <td>{{profileresults[0][1]}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Full Name</th>
+                                <td>::</td>
+                                <td>{{profileresults[0][3]}}</td>
+                            </tr>
+                            <tr>
+                                <th>Department </th>
+                                <td>::</td>
+                                <td>{{profileresults[0][4]}}</td>
+                            </tr>
+                            <tr>
+                                <th>Designation</th>
+                                <td>::</td>
+                                <td>{{profileresults[0][5]}}</td>
+                            </tr>
+                            <tr>
+                                <th>Mobile Number</th>
+                                <td>::</td>
+                                <td>{{profileresults[0][6]}}</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>::</td>
+                                <td>{{profileresults[0][7]}}</td>
+                            </tr>
+                            <tr>
+                                <th>Specification</th>
+                                <td>::</td>
+                                <td>{{profileresults[0][8]}}</td>
+                            </tr>
+                            <tr>
+                                <th>Address </th>
+                                <td>::</td>
+                                <td>{{profileresults[0][9]}}</td>
+                            </tr>
+                            
+                                <h5 style="font-weight: bold;position: relative;left:50px;bottom:250px;border:4px solid grey;width:fit-content;border-radius:10px ;padding:5px;box-shadow: 10px 10px 10px grey;">FACULTY_NAME==➡️{{profileresults[0][3]}}</h5>
+                                <h5 style="font-weight: bold;position: relative;left:50px;bottom:250px;border:4px solid grey;width:fit-content;border-radius:10px ;padding:5px;box-shadow: 10px 10px 10px grey;">AdmissionNo==➡️123456</h5>
+                                <h5 style="font-weight: bold;position: relative;left:50px;bottom:250px;border:4px solid grey;width:fit-content;border-radius:10px ;padding:5px;box-shadow: 10px 10px 10px grey;">YOJ➡️2020</h5>
+                        </table>
+                        </div>
+            
+                    </div>
+                {% endif %}
+                </div>
+            
+            <div class="addmarks">
+            {% if  add_marks %}
+           
+                <div class="faddmarkss">
+                    <h3 style="text-decoration:underline;">Please Insert Student Marks..</h3>
+                   
+                   
+                    <form method="POST" action="{{url_for('faddmarks',fname=fname,name=name,facid=facid) }}"  onsubmit="window.alert('Successfully Inserted Student Marks...');">
+                        
+                            <label for="sid">Sid::</label>
+                            <input type="number" id="sid" class="marks"  style="position: relative;left:200px;" placeholder="studentid" name="sid" required>
+                            <br>
+                            <br>
+                            <label for="fsemisteryear">Sem1::</label>
+                            <input type="text" id="fsemisteryear"   style="position: relative;left:180px;" class="marks" placeholder=" Enter semister" name="syear1" required>
+                            <br>
+                            <br>
+
+                    <label for="enint">EN-Internal</label>
+                    <input type="number"  id="enint"   style="position: relative;left:130px;" placeholder="En-internal" name="enint" required>
+                    <br>
+                    <br>
+
+
+                    <label for="enext">EN-External</label>
+                    <input type="number"  id="enext"   style="position: relative;left:130px;" class="marks" placeholder="en-external" name="enext" required>
+                    <br>
+                    <br>
+                    <label for="entotal">EN-Total</label>
+
+                    <input type="number"  id="entotal"   style="position: relative;left:160px;" class="marks" placeholder="en-total" name="entotal" required>
+                    <br>
+                    <br>
+                    <label for="engrade">EN-Grade</label>
+                    <input type="text"  id="engrade"   style="position: relative;left:150px;"class="marks" placeholder="en-grade" name="engrade" required>
+                    <br>
+                    <br>
+
+                    <label for="m1int">M1-INTERNEL</label>
+                    <input type="number" id="m1int"  style="position: relative;left:110px;"  class="marks" placeholder="m1-internal" name="m1int" required>
+                    <br>
+                    <br>
+
+                    <label for="m1ext">M1-EXTERNAL</label>
+
+                    <input type="number"  id="m1ext"   style="position: relative;left:105px;" class="marks" placeholder="m1-external" name="m1ext" required>
+
+                    <br>
+                    <br>
+                    <label for="m1total">M1-Total</label>
+
+                    <input type="number"  id="m1total"  style="position: relative;left:145px;" class="marks" placeholder="m1-total" name="m1total" required>
+                    <br>
+                    <br>
+                    <label for="m1grade">M1-Grade</label>
+
+                    <input type="text"  id="m1grade"  style="position: relative;left:135px;" class="marks" placeholder="m1-grade" name="m1grade" required>
+                    <br>
+                    <br>
+
+                    <label for="beeint">BEE-Internal</label>
+
+                    <input type="number" id="beeint"  style="position: relative;left:115px;" class="marks" placeholder="bee-internal" name="beeint" required>
+                    <br>
+                    <br>
+                    <label for="beeext">BEE-External</label>
+                    <input type="number" id="beeext"  style="position: relative;left:110px;" class="marks" placeholder="bee-external" name="beeext" required>
+                    <br>
+                    <br>
+                    <label for="beetotal">BEE-Total</label>
+                    <input type="number"  id="beetotal"  style="position: relative;left:140px;"  class="marks" placeholder="bee-total" name="beetotal" required>
+                    <br>
+                    <br>
+                    <label for="beegrade">BEE-Grade</label>
+
+                    <input type="text"  id="beegrade"  style="position: relative;left:135px;" class="marks" placeholder="bee-grade" name="beegrade" required>
+                    <br>
+                    <br>
+                    <label for="chemint">chem-Internal</label>
+
+                    <input type="number"  id="chemint" style="position: relative;left:99px;"  class="marks" placeholder="chem-internal" name="chemint" required>
+                    <br>
+                    <br>
+
+
+
+                    <label for="chemext">CHEM-External</label>
+                    <input type="number" id="chemext"  style="position: relative;left:90px;" class="marks" placeholder="chem-external" name="chemext" required>
+                    <br>
+
+                    <br>
+
+                    <label for="chemtotal">CHEM-Total</label>
+
+                    <input type="number"id="chemtotal"  style="position: relative;left:117px;" class="marks" placeholder="chemtotal" name="chemtotal" required>
+
+
+                    <br>
+                    <br>
+                    <label for="chemgrade">CHEM-Grade</label>
+
+                    <input type="text" id="chemgrade"  style="position: relative;left:105px;" class="marks" placeholder="chemgrade" name="chemgrade" required>
+                    <br>
+                    <br>
+                    <div class="secondsem">
+
+                    <label for="semisteryear2">Sem2::</label>
+                    <input type="text" id="semisteryear"   style="position: relative;left:130px;" class="marks" placeholder="semister" name="syear2" required>
+                    <br>
+                    <br>
+
+                    <label for="apint">AP-Internal</label>
+                    <input type="number"  id="apint"  class="marks2"  style="position: relative;left:89px;" placeholder="ap-internal" name="apint" required>
+                    <br>
+                    <br>
+
+
+                    <label for="apext">AP-External</label>
+                    <input type="number"  id="apext"   style="position: relative;left:96px;" class="marks2" placeholder="ap-external" name="apext" required>
+                    <br>
+                    <br>
+                    <label for="aptotal">AP-Total</label>
+
+                    <input type="number"  id="aptotal"   style="position: relative;left:120px;" class="marks2" placeholder="ap-total" name="aptotal" required>
+                    <br>
+                    <br>
+                    <label for="apgrade">AP-Grade</label>
+
+                    <input type="text"  id="apgrade"   style="position: relative;left:110px;"class="marks2" placeholder="ap-grade" name="apgrade" required>
+                    <br>
+                    <br>
+
+                    <label for="ppsint">PPS-Internal</label>
+
+                    <input type="number" id="ppsint"  style="position: relative;left:80px;"  class="marks2" placeholder="pps-internal" name="ppsint" required>
+                    <br>
+                    <br>
+
+                    <label for="ppsext">PPS-External</label>
+
+                    <input type="number"  id="ppsext"   style="position: relative;left:80px;" class="marks2" placeholder="pps-external" name="ppsext" required>
+
+                    <br>
+                    <br>
+                    <label for="ppstotal">PPS-Total</label>
+
+                    <input type="number"  id="ppstotal"  style="position: relative;left:105px;" class="marks2" placeholder="pps-total" name="ppstotal" required>
+                    <br>
+                    <br>
+                    <label for="ppsgrade">PPS-Grade</label>
+
+                    <input type="text"  id="ppsgrade"  style="position: relative;left:95px;" class="marks2" placeholder="pps-grade" name="ppsgrade" required>
+                    <br>
+                    <br>
+
+                    <label for="m2int">M-11-internal</label>
+
+                    <input type="number" id="m2int"  style="position: relative;left:67px;" class="marks2" placeholder="m2-internal" name="m2int" required>
+                    <br>
+                    <br>
+                    <label for="m2ext">M2-External</label>
+                    <input type="number" id="m2ext"  style="position: relative;left:80px;" class="marks2" placeholder="m2-external" name="m2ext" required>
+                    <br>
+                    <br>
+                    <label for="m2total">M2-Total</label>
+                    <input type="number"  id="m2total"  style="position: relative;left:110px;"  class="marks2" placeholder="m2-total" name="m2total" required>
+                    <br>
+                    <br>
+                    <label for="m2grade">M2-Grade</label>
+
+                    <input type="text"  id="m2grade"  style="position: relative;left:100px;" class="marks2" placeholder="m2-grade" name="m2grade" required>
+                    <br>
+                    <br>
+                    <label for="engfint">ENGF-Internal</label>
+
+                    <input type="number"  id="engfint" style="position: relative;left:78px;"  class="marks2" placeholder="engf-internal" name="engfint" required>
+                    <br>
+                    <br>
+
+
+
+                    <label for="engfext">ENGF-External</label>
+                    <input type="number" id="engfext"  style="position: relative;left:77px;" class="marks2" placeholder="engf-external" name="engfext" required>
+                    <br>
+
+                    <br>
+
+                    <label for="engftotal">ENGF-Total</label>
+
+                    <input type="number"id="engftotal"  style="position: relative;left:107px;" class="marks2" placeholder="engftotal" name="engftotal" required>
+
+
+                    <br>
+                    <br>
+                    <label for="engfrade">Engf-Grade</label>
+
+                    <input type="text" id="engfgrade"  style="position: relative;left:105px;" class="marks2" placeholder="engfgrade" name="engfgrade" required>
+                    <br>
+                    <br>
+                    </div>
+
+                    <div class="semister3">
+                    <label for="semister3">Sem3::</label>
+                    <input type="text" id="semister3"   style="position: relative;left:140px;" class="marks3" placeholder="semister" name="syear3" required>
+                    <br>
+                    <br>
+
+                    <label for="dbmsin">DBMS-Internal</label>
+                    <input type="number"  id="dbmsin"  class="marks3"  style="position: relative;left:79px;" placeholder="dbms-internal" name="dbmsint" required>
+                    <br>
+                    <br>
+
+
+                    <label for="dbmsext">dbms-External</label>
+                    <input type="number"  id="dbmsext"   style="position: relative;left:79px;" class="marks3" placeholder="dbms-external" name="dbmsext" required>
+                    <br>
+                    <br>
+                    <label for="dbmstotal">dbms-Total</label>
+
+                    <input type="number"  id="dbmstotal"   style="position: relative;left:105px;" class="marks3" placeholder="dbms-total" name="dbmstotal" required>
+                    <br>
+                    <br>
+                    <label for="dbmsgrade">dbms-Grade</label>
+
+                    <input type="text"  id="dbmsgrade"   style="position: relative;left:95px;"class="marks3" placeholder="dbms-grade" name="dbmsgrade" required>
+                    <br>
+                    <br>
+
+                    <label for="javaint">java-Internal</label>
+
+                    <input type="number" id="javaint"  style="position: relative;left:95px;"  class="marks3" placeholder="java-internal" name="javaint" required>
+                    <br>
+                    <br>
+
+                    <label for="javaext">java-External</label>
+
+                    <input type="number"  id="javaext"   style="position: relative;left:95px;" class="marks3" placeholder="java-external" name="javaext" required>
+
+                    <br>
+                    <br>
+                    <label for="javatotal">java-Total</label>
+
+                    <input type="number"  id="javatotal"  style="position: relative;left:120px;" class="marks3" placeholder="java-total" name="javatotal" required>
+                    <br>
+                    <br>
+                    <label for="javagrade">java-Grade</label>
+
+                    <input type="text"  id="javagrade"  style="position: relative;left:115px;" class="marks3" placeholder="java-grade" name="javagrade" required>
+                    <br>
+                    <br>
+
+                    <label for="osint">os-Internal</label>
+
+                    <input type="number" id="osint"  style="position: relative;left:110px;" class="marks3" placeholder="os-internal" name="osint" required>
+                    <br>
+                    <br>
+                    <label for="osext">os-External</label>
+                    <input type="number" id="osext"  style="position: relative;left:105px;" class="marks3" placeholder="os-external" name="osext" required>
+                    <br>
+                    <br>
+                    <label for="ostotal">os-Total</label>
+                    <input type="number"  id="ostotal"  style="position: relative;left:135px;"  class="marks3" placeholder="os-total" name="ostotal" required>
+                    <br>
+                    <br>
+                    <label for="osgrade">os-Grade</label>
+
+                    <input type="text"  id="osgrade"  style="position: relative;left:125px;" class="marks3" placeholder="os-grade" name="osgrade" required>
+                    <br>
+                    <br>
+                    <label for="seint">se-Internal</label>
+
+                    <input type="number"  id="seint" style="position: relative;left:115px;"  class="marks3" placeholder="se-internal" name="seint" required>
+                    <br>
+                    <br>
+
+
+
+                    <label for="seext">se-External</label>
+                    <input type="number" id="seext"  style="position: relative;left:107px;" class="marks3" placeholder="se-external" name="seext" required>
+                    <br>
+
+                    <br>
+
+                    <label for="setotal">se-Total</label>
+
+                    <input type="number"id="setotal"  style="position: relative;left:137px;" class="marks3" placeholder="setotal" name="setotal" required>
+
+
+                    <br>
+                    <br>
+                    <label for="segrade">se-Grade</label>
+
+                    <input type="text" id="segrade"  style="position: relative;left:126px;" class="marks3" placeholder="segrade" name="segrade" required>
+                    <br>
+                    <br>
+                    </div>
+
+                    <div class="semister4">
+                    <label for="semister4">Sem4::</label>
+                    <input type="text" id="semister4"   style="position: relative;left:150px;" class="marks4" placeholder="semister" name="syear4" required>
+                    <br>
+                    <br>
+
+                    <label for="pyin">py-Internal</label>
+                    <input type="number"  id="pyin"  class="marks4"  style="position: relative;left:115px;" placeholder="py-internal" name="pyint" required>
+                    <br>
+                    <br>
+
+
+                    <label for="pyext">py-External</label>
+                    <input type="number"  id="pyext"   style="position: relative;left:109px;" class="marks4" placeholder="py-external" name="pyext" required>
+                    <br>
+                    <br>
+                    <label for="pytotal">py-Total</label>
+
+                    <input type="number"  id="pytotal"   style="position: relative;left:135px;" class="marks4" placeholder="py-total" name="pytotal" required>
+                    <br>
+                    <br>
+                    <label for="pygrade">py-Grade</label>
+
+                    <input type="text"  id="pygrade"   style="position: relative;left:125px;"class="marks4" placeholder="py-grade" name="pygrade" required>
+                    <br>
+                    <br>
+
+                    <label for="msfint">msf-Internal</label>
+
+                    <input type="number" id="inmsft"  style="position: relative;left:100px;"  class="marks4" placeholder="msf-internal" name="msfint" required>
+                    <br>
+                    <br>
+
+                    <label for="msfext">msf-External</label>
+
+                    <input type="number"  id="msfext"   style="position: relative;left:100px;" class="marks4" placeholder="msf-external" name="msfext" required>
+
+                    <br>
+                    <br>
+                    <label for="msftotal">msf-Total</label>
+
+                    <input type="number"  id="msftotal"  style="position: relative;left:125px;" class="marks4" placeholder="msf-total" name="msftotal" required>
+                    <br>
+                    <br>
+                    <label for="msfgrade">msf-Grade</label>
+
+                    <input type="text"  id="msfgrade"  style="position: relative;left:115px;" class="marks4" placeholder="msf-grade" name="msfgrade" required>
+                    <br>
+                    <br>
+
+                    <label for="befaint">befa-Internal</label>
+
+                    <input type="number" id="befaint"  style="position: relative;left:85px;" class="marks4" placeholder="befa-internal" name="befaint" required>
+                    <br>
+                    <br>
+                    <label for="befaext">befa-External</label>
+                    <input type="number" id="befaext"  style="position: relative;left:85px;" class="marks4" placeholder="befa-external" name="befaext" required>
+                    <br>
+                    <br>
+                    <label for="befatotal">befa-Total</label>
+                    <input type="number"  id="befatotal"  style="position: relative;left:120px;"  class="marks4" placeholder="befa-total" name="befatotal" required>
+                    <br>
+                    <br>
+                    <label for="befagrade">befa-Grade</label>
+
+                    <input type="text"  id="befagrade"  style="position: relative;left:100px;" class="marks4" placeholder="befa-grade" name="befagrade" required>
+                    <br>
+                    <br>
+                    <label for="dsint">ds-Internal</label>
+
+                    <input type="number"  id="dsint" style="position: relative;left:105px;"  class="marks4" placeholder="ds-internal" name="dsint" required>
+                    <br>
+                    <br>
+
+
+
+                    <label for="dsext">ds-External</label>
+                    <input type="number" id="dsext"  style="position: relative;left:105px;" class="marks4" placeholder="ds-external" name="dsext" required>
+                    <br>
+
+                    <br>
+
+                    <label for="dstotal">ds-Total</label>
+
+                    <input type="number"id="dstotal"  style="position: relative;left:127px;" class="marks4" placeholder="dstotal" name="dstotal" required>
+
+
+                    <br>
+                    <br>
+                    <label for="dsgrade">ds-Grade</label>
+
+                    <input type="text" id="dsgrade"  style="position: relative;left:116px;" class="marks4" placeholder="dsgrade" name="dsgrade" required>
+                    <br>
+                    <br>
+                    </div>
+                    <div class="semister3">
+                            <label for="semisteryear">Sem::</label>
+                            <input type="text" id="semisteryear"   style="position: relative;left:150px;" class="marks" placeholder="semister" name="syear5" required>
+                            <br>
+                            <br>
+                        
+                            <label for="mlin">ML-Internal</label>
+                            <input type="number"  id="mlin"  class="marks"  style="position: relative;left:99px;" placeholder="ml-internal" name="mlint" required>
+                            <br>
+                            <br>
+                       
+                       
+                            <label for="mlext">ML-External</label>
+                            <input type="number"  id="mlext"   style="position: relative;left:99px;" class="marks" placeholder="ml-external" name="mlext" required>
+                            <br>
+                            <br>
+                            <label for="mltotal">ML-Total</label>
+                            
+                              <input type="number"  id="mltotal"   style="position: relative;left:125px;" class="marks" placeholder="ml-total" name="mltotal" required>
+                            <br>
+                            <br>
+                            <label for="mlgrade">ML-Grade</label>
+                        
+                              <input type="text"  id="mlgrade"   style="position: relative;left:115px;"class="marks" placeholder="ml-grade" name="mlgrade" required>
+                            <br>
+                            <br>
+                    
+                            <label for="cdint">CD-Internal</label>
+                            
+                              <input type="number" id="cdint"  style="position: relative;left:100px;"  class="marks" placeholder="cd-internal" name="cdint" required>
+                            <br>
+                            <br>
+                        
+                            <label for="cdext">CD-External</label>
+                            
+                              <input type="number"  id="cdext"   style="position: relative;left:100px;" class="marks" placeholder="cd-external" name="cdext" required>
+                           
+                              <br>
+                              <br>
+                            <label for="cdtotal">CD-Total</label>
+                            
+                              <input type="number"  id="cdtotal"  style="position: relative;left:125px;" class="marks" placeholder="cd-total" name="cdtotal" required>
+                            <br>
+                            <br>
+                            <label for="cdgrade">CD-Grade</label>
+                            
+                              <input type="text"  id="cdgrade"  style="position: relative;left:115px;" class="marks" placeholder="cd-grade" name="cdgrade" required>
+                            <br>
+                            <br>
+                
+                            <label for="slint">SL-Internal</label>
+                            
+                              <input type="number" id="slint"  style="position: relative;left:105px;" class="marks" placeholder="sl-internal" name="slint" required>
+                            <br>
+                            <br>
+                            <label for="slext">SL-External</label>
+                            <input type="number" id="slext"  style="position: relative;left:105px;" class="marks" placeholder="sl-external" name="slext" required>
+                            <br>
+                            <br>
+                            <label for="sltotal">SL-Total</label>
+                            <input type="number"  id="sltotal"  style="position: relative;left:135px;"  class="marks" placeholder="sl-total" name="sltotal" required>
+                            <br>
+                            <br>
+                            <label for="slgrade">SL-Grade</label>
+                            
+                            <input type="text"  id="slgrade"  style="position: relative;left:125px;" class="marks" placeholder="sl-grade" name="slgrade" required>
+                            <br>
+                            <br>
+                            <label for="dppmint">DPPM-Internal</label>
+                            
+                            <input type="number"  id="dppmint" style="position: relative;left:78px;"  class="marks" placeholder="dppm-internal" name="dppmint" required>
+                            <br>
+                            <br>
+            
+                        
+                
+                            <label for="dppmext">DPPM-External</label>
+                            <input type="number" id="dppmext"  style="position: relative;left:77px;" class="marks" placeholder="dppm-external" name="dppmext" required>
+                            <br>
+                       
+                            <br>
+                       
+                            <label for="dppmtotal">DPPM-Total</label>
+                            
+                              <input type="number"id="dppmtotal"  style="position: relative;left:107px;" class="marks" placeholder="dppmtotal" name="dppmtotal" required>
+                            
+                        
+                            <br>
+                            <br>
+                            <label for="dppmgrade">DPPM-Grade</label>
+                            
+                              <input type="text" id="dppmgrade"  style="position: relative;left:96px;" class="marks" placeholder="dppmgrade" name="dppmgrade" required>
+                            
+                        <br>
+                    </div>
+            
+                        <br>
+                            <label for="cgpa">CGPA</label>
+                        
+                              <input type="number"  id="cgpa"  style="position: relative;left:160px;" class="marks" placeholder="cgpa" name="cgpa" required>
+                            <br>
+                       
+                            <br>
+                            <label for="gpa">gpa</label>
+                            <input type="number" id="gpa"  style="position: relative;left:170px;" class="marks" placeholder="gpa" name="gpa" required>
+                            <br>
+            
+                            <br>
+                        <input type="submit" value="Submit" style="position: relative;left:200px;"  href="/">
+                    </form>
+                </div>
+             {% endif %}
+            </div>
+         
+             {% if add_notes %}
+            
+             <div class="addnotes">
+                
+                <h4 style="font-weight:bold;text-decoration:underline;">Insert Student Notes</h4>
+                
+                <form method="POST" action="{{ url_for('add_notes', fname=fname, name=name, facid=facid) }}" onsubmit="window.alert(' Sucessfully Inserted Student Notes...');">
+                <label  style="text-decoration:underline;" for="faccid">Faculty Id</label>
+                <input type="text" style="position:relative;left:40px;" id="faccid" name="facname" required maxlength="4">
+                <br><br>
+                <label for="subcode">Subject Code</label>
+                <input type="number"style="position:relative;left:9px;" id="subcode" name="subcode" required>
+                <br><br>
+                <label for="subname">Subject Name</label>
+                <input type="text" style="position:relative;left:3px;" id="subname" name="subname" required>
+                <br><br>
+                <label for="sublink">Subject Link </label>
+                <input type="url"  style="position:relative;left:19px;" id="sublink" name="sublink" required>
+                <br><br>
+                <input type="submit" style="position:relative;left:150px;border-radius:10px;padding:5px;text-decoration:underline;font-weight:bold;" value="Submit" id="nsubmit" href="/">
+                </form>
+             </div>
+             {% endif %}
+
+             {% if add_jobs %}
+             <div class="addjobs">
+                <form method="POST" action="{{ url_for('add_jobs', fname=fname, name=name, facid=facid) }}" onsubmit="window.alert('Sucessfully Inserted Job Details...');">
+                    <h3>Insert Job Details</h3>
+                    <label for="companyname">Company_Name</label>
+                    <input type="text" id="companyname"  style="position:relative;left:19px;" name="companyname" required>
+                    <br>
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" style="position:relative;left:119px;"  name="email" required>
+                    <br>
+                    <br>
+                    <label for="jobposition">Job_Position</label>
+                    <input type="text" id="jobposition" style="position:relative;left:53px;"  name="jobposition" required>
+                    <br>
+                    <br>
+                    <label for="location">Location</label>
+                    <input type="text" id="location" style="position:relative;left:90px;"  name="location" required>
+                    <br>
+                    <br>
+                    <label for="requriments">Requriments</label>
+                    <input type="text" id="requriments" style="position:relative;left:52px;"  name="requriments" required>
+                    <br>
+                    <br>
+                    <label for="url">Url</label>
+                    <input type="url" id="url" style="position:relative;left:145px;"  name="url" required>
+                    <br>
+                    <br>
+                    <input type="submit" style="position:relative;left:190px;bottom:10px;"  value="Submit" href="/" id="nsubmit">
+                </form>
+            </div>
+            {% endif %}
+
+            {% if  is_pcomplaints %}
+            <div class="pcc">
+                <div class="PComplaints" style="display: flex; flex-wrap: wrap;overflow:hidden;">
+                    {% for cres in compresultss %}
+                    <div  class="card" style="width: 28%; margin: 10px;overflow:hidden;">
+                        <img class="card-img-top" src="data:image/png;base64,{{ cres['cimage'] }}" alt="Card image cap">
+                        <div class="card-body" id="card-bodys">
+                            <h5 class="card-title">Student Name: {{ cres['cname']}}</h5>
+                            <h5 class="card-title">Roll No: {{ cres['cid'] }}</h5>
+                            <p class="card-text" id="Description">Description: {{ cres['cdescription'] }}</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" id="department">Department: {{ cres['cdepartment'] }}</li>
+                                <li class="list-group-item" id="department">Section: {{ cres['csection'] }}</li>
+                                <li class="list-group-item" id="department">Category: {{ cres['ccategory'] }}</li>
+                            </ul>
+                            <hr>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            
+
+        </body>
+    </head>
+</html>

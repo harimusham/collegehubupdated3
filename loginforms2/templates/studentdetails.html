@@ -1,0 +1,310 @@
+<html>
+<head>
+    <title>Insert Data into STUDENTS TABLE SQLite</title>
+    <style>
+        .ast
+        {
+            border:2px solid black;
+            max-width:400px;
+            padding:30px;
+            border-sizing:border-box;
+            position:relative;
+            left:680px;
+        }
+        #sid
+        {
+            position: relative;
+            left:120px;
+            padding:5px;
+            border-radius:10px;
+        }
+        #name
+        {
+            position:relative;
+            left:100px;
+            padding:5px; border-radius:10px;
+
+        }
+        #username
+        {
+            position:relative;
+            left:49px; padding:5px; border-radius:10px;
+
+        }
+    
+    
+
+        #password
+        {
+            position:relative;
+            left:49px;
+            padding:5px; border-radius:10px;
+
+        }
+        #fathername
+        {
+            position:relative;
+            left:22px;
+            padding:5px; border-radius:10px;
+        }
+        #mothername
+        {
+            position:relative;
+            left:10px;
+            padding:5px; border-radius:10px;
+        }
+        #mobilenumber
+        {
+            position:relative;
+            left:5px;
+            padding:5px; border-radius:10px;
+
+        }
+        #pmobilenumber
+        {
+            position:relative;
+            left:5px;
+            padding:5px; border-radius:10px;
+        }
+        #dob
+        {
+            position:relative;
+            left:120px;
+            padding:5px; border-radius:10px;
+        }
+        #gender{
+            position:relative;
+            left:80px;
+            padding:5px; border-radius:10px;
+        }
+        #email
+        {
+            position:relative;
+            left:95px;
+            padding:5px; border-radius:10px;
+        }
+        #course
+        {
+            position:relative;
+            left:80px;
+            padding:5px; border-radius:10px;
+        }
+        #courses
+        {
+            position:relative;
+            left:150px;
+            padding:5px; border-radius:10px;
+        }
+        #ssc
+        {
+            position:relative;
+            left:45px;
+            padding:5px; border-radius:10px;
+        }
+        #intermarks
+        { position:relative;
+            left:26px;
+            padding:5px; border-radius:10px;
+
+        }
+        #aadhaar
+        {
+            position:relative;
+            left:60px;
+            padding:5px; border-radius:10px;
+        }
+        #address
+        {
+            position:relative;
+            left:70px;
+            padding:5px; border-radius:10px;
+        }
+        #village
+        {
+            position:relative;
+            left:93px;
+            padding:5px; border-radius:10px;
+        }
+        #city
+        {
+            position:relative;
+            left:115px;
+            padding:5px; border-radius:10px;
+        }
+        #state
+        {
+            position:relative;
+            left:110px;
+            padding:5px; border-radius:10px;
+        }
+        #country
+        {
+            position:relative;
+            left:72px;
+            padding:5px; border-radius:10px;
+        }
+        #regapproved
+        {
+            position:relative;
+            left:90px; border-radius:10px;
+            padding:5px;
+        }
+
+        .logout
+        {
+         position: absolute;
+         right:7px;
+         top:135px;
+         color:black;
+         font-weight: bold;
+         border:2px solid black;
+         padding:5px;
+         font-size: 20px;
+         border-radius:10px;
+        }
+        .logout:hover
+        {
+         background-color:black;
+         color:white;
+         font-weight: bold;
+        }
+        #submit
+        {
+            padding:12px;
+            position:relative;
+            left:150px;
+            border-radius:10px;
+
+        }
+        #submit:hover
+        {
+            color:white;
+            background-color:black;
+            cursor:pointer;
+            font-weight: bold;
+        }
+      
+    </style>
+</head>
+<body>
+    <div>
+        <img src="static/sreyasheader.jpg"  width="100%" height="110px">
+    </div>
+    <h2 style="position:sticky;">Hello Admin..... Insert Student Details </h2>
+    <a class="logout" href="{{ url_for('logout')}}">Logout</a> 
+    <hr> 
+<div class="ast">
+    <form method="POST" action="/inserts-data" enctype="multipart/form-data" onsubmit="window.alert(' Sucessfully Submitted Student Details...');">
+
+        <label for="sid">SID</label>
+        <input type="integer" id="sid" name="sid"  required maxlength="4"><br>
+
+        <label for="username">USERNAME</label>
+        <input type="text" id="username" name="susername" required><br>
+
+        <label for="password">PASSWORD</label>
+        <input type="TEXT" id="password" name="spassword"  minlength="8" required><br>
+       
+
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="sname" required><br>
+
+
+        <label for="fathername">FATHER NAME</label>
+        <input type="text" id="fathername" name="sfathername" required><br>
+
+        <label for="mothername">MOTHER NAME</label>
+        <input type="text" id="mothername" name="smothername" required><br>
+        
+        <label for="mobilenumber">S-MOB NUMBER</label>
+        <input type="NUMBER" id="mobilenumber" name="smobilenumber" minlength="10" required><br>
+
+        <label for="pmobilenumber">P-MOB NUMBER</label>
+        <input type="NUMBER" id="pmobilenumber" name="pmobilenumber"  minlength="10" required><br>
+
+        <label for="dob">DOB</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label for="gender">GENDER</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <br>
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" name="semail" required><br>
+        <label for="course">COURSE</label>
+        <select id="course" name="scourse" required>
+            <option value="">Select Department</option>
+            <option value="COMPUTERSCIENCE">COMPUTERSCIENCE</option>
+            <option value="DATASCIENCE">DATASCIENCE</option>
+            <option value="ECE">ECE</option>
+            <option value="AI-ML">AIML</option>
+            <option value="MECHANICAL">MECHANICAL</option>
+            <option value="CIVIL">CIVIL</option>
+        </select>
+        <br>
+        <label for="courses">YEAR</label>
+        <select id="courses" name="stuyear" required>
+            <option value="">Select Year</option>
+            <option value="1">YEAR1</option>
+            <option value="2">YEAR2</option>
+            <option value="3">YEAR3</option>
+            <option value="4">YEAR4</option>
+        </select>
+        <br>
+
+        <label for="ssc">SSC-MARKS</label>
+        <input type="NUMBER" id="ssc" name="sscmarks" required><br>
+
+
+        <label for="intermarks">INTER-MARKS</label>
+        <input type="NUMBER" id="intermarks" name="sintermarks" required><br>
+
+        <label for="aadhaar">CUR-CGPA</label>
+        <input type="number"  step="any" id="aadhaar" name="saadharnumber" required><br>
+
+        <label for="address">ADDRESS</label>
+        <input type="text"  id="address" name="address"  required><br>
+        <label for="city">SECTION</label>
+        <select id="city" name="city" required>
+            <option value="">Select Section</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+        </select>
+        <br>
+        <label for="state">STATE</label>
+        <select id="state" name="state" required>
+            <option value="">Select State</option>
+            <option value="Telengana">Telengana</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Goa">Goa</option>
+        </select>
+        <br>
+        <label for="country">COUNTRY</label>
+        <select id="country" name="country" required>
+            <option value="">Select country</option>
+            <option value="India">India</option>
+            <option value="Pakisthan">Pakisthan</option>
+            <option value="China">China</option>
+        </select>
+        <br>
+        <label for="regapproved">REG-APPROVED BY</label>
+        <BR>
+        <select id="regapproved" name="regapproved" required>
+            <option value="">REG-APPROVED BY</option>
+            <option value="RRR">RRR</option>
+            <option value="Harikiran">HariKiran</option>
+            <option value="Prabhas">Prabhas</option>
+        </select>
+        <br>
+        <BR>
+        <label for="image">Image</label>
+        <input type="file" class="form-control" id="image" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg,image/png">
+        <br>
+        <input type="submit" id="submit" value="Submit" href="/">
+    </form>
+</div>
+</body>
+</html>

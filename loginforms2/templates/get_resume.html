@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logout
+        {
+         position: absolute;
+         right:5px;
+         top:135px;
+         color:black;
+         font-weight: bold;
+         border:2px solid black;
+         padding:20px;
+         font-size: 20px;
+         border-radius:10px;
+         margin-top:10px;
+        }
+        .logout:hover
+        {
+         background-color:black;
+         color:white;
+         font-weight: bold;
+        }
+        .mainform
+        {
+            border:2px solid black;
+            width:fit-content;
+            padding:100px;
+            position:relative;
+            left:630px;
+            border-radius:20px;
+            box-shadow: 5px 10px #888888;
+
+        }
+    </style>
+    <title>Get_student_Resume</title>
+</head>
+<body>
+    <div>
+        <img src="static/sreyasheader.jpg"  width="100%" height="130px" class="sticky">
+    </div>
+    <div class="logouts">
+        <h1>WELCOME...............<span>PRINCIPAL </h1>
+        <a class="logout" href="{{ url_for('logout')}}">LOGOUT</a>  
+    </div>
+    <form action="/get_pdf">
+        <div class="mainform">
+        <label for="sid" style="font-size:50px;text-decoration:underline;">ENTER_STUDENT_ID</label><br>
+        <br>
+        <input style="height:60px;width:490px;font-size:40px;text-align:center;"type="number" id="sid" name="plstudentsid" placeholder="Enter Student Id...."/><br>
+        <br>
+        <input  style="padding:20px;height:60px;width:490px;font-weight:bold;cursor:pointer;font-size:30px;" type="submit" value="GET_RESUME">
+        </div>
+    </form>
+</body>
+</html>

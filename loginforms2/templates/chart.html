@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        #attendanceChart {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+        .logout
+        {
+         position: absolute;
+         right:5px;
+         top:139px;
+         color:black;
+         font-weight: bold;
+         border:2px solid black;
+         padding:5px;
+         font-size: 20px;
+         border-radius:10px;
+        }
+        .logout:hover
+        {
+         background-color:black;
+         color:white;
+         font-weight: bold;
+        }
+        img
+        {
+            border:2px solid black;
+            border-radius:10px;
+            margin-bottom:10px;
+        }
+        .chart-label {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .chart-value {
+            font-weight: bold;
+            font-size:90px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="static/sreyasheader.jpg"  width="100%" height="130px">
+    </div>
+    <div>
+    <h3>WELCOME.............PRINCIPAL</h3>
+    <a class="logout" href="{{ url_for('logout')}}">logout</a> 
+    </div>
+    <hr>
+    
+        <h1>ATTENDANCE REPORT FROM DATASCIENCE-A </h1>
+    <canvas id="attendanceChart" width="800" height="400"></canvas>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var data = {{ data | tojson }};
+
+            var studentData = [];
+            data.forEach(row => {
+                studentData.push({ id: row[0], attendance: row[1] });
+            });
+
+            var studentNames = studentData.map(student => student.id);
+            var attendanceData = studentData.map(student => student.attendance);
+
+            var ctx = document.getElementById('attendanceChart').getContext('2d');
+            var attendanceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: studentNames,
+                    datasets: [{
+                        label: 'Attendance',
+                        data: attendanceData,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    animation: {
+                        duration: 2000, // Animation duration in milliseconds
+                        easing: 'easeInOutQuart' // Animation easing effect
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                max: 100
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Attendance (%)'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Students'
+                            }
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Student Attendance'
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
